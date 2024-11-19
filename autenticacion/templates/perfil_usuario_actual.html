@@ -1,0 +1,11 @@
+{% extends "header-footer.html" %}
+
+{% block content %}
+<main class="container">
+    <h1>Mi Perfil</h1>
+    <h1>Bienvenido, <span class="text-uppercase">{{ usuario.first_name }}</span></h1>
+    <p>Mis datos:</p>
+    <p>Nombre completo: <span class="text-uppercase">{{ usuario.get_full_name }}</span></p>
+    <p>Correo electrónico: {{ usuario.email }}</p>
+</main>
+{% endblock %}

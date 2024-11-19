@@ -1,0 +1,29 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Archivos de configuración del entorno virtual
+venv/
+.venv/
+ENV/
+.env/
+
+# Archivos de bases de datos locales
+*.sqlite3
+
+# Archivos de configuración local de Django
+*.log
+
+# Archivos de compilación
+*.egg
+*.egg-info/
+dist/
+build/
+.coverage
+
+# Configuración de entornos
+.env
+.env.*
+.DS_Store

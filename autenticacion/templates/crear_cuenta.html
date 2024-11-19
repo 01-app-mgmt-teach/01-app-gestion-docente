@@ -1,0 +1,59 @@
+{% extends "header-footer.html" %}
+
+{% block content %}
+
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <form method="POST" class="card card-body">
+                <h1 class="text-center">Crear cuenta</h1>
+                <strong>{{error}}</strong>
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="tipo_usuario">Tipo de Usuario:</label>
+                    <select id="opciones" name="tipo_usuario" class="form-select" required>
+                        <option value="">--Selecciona--</option>
+                        <option value="opcion1">Estudiante</option>
+                        <option value="opcion2">Profesor</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="nombres">Nombres:</label>
+                    <input required type="text" name="nombres" class="form-control" placeholder="Nombres" id="nombres">
+                </div>
+                <div class="mb-3">
+                    <label for="apellidop">Apellido paterno:</label>
+                    <input required type="text" name="apellidop" class="form-control" placeholder="Apellido paterno" id="apellidop">
+                </div>
+                <div class="mb-3">
+                    <label for="apellidom">Apellido materno:</label>
+                    <input required type="text" name="apellidom" class="form-control" placeholder="Apellido materno" id="apellidom">
+                </div>
+
+                <div class="mb-3">
+                    <label for="dni">Número de DNI:</label>
+                    <input required type="number" name="dni" class="form-control" placeholder="Número de DNI" id="dni">
+                </div>
+                <div class="mb-3">
+                    <label for="email">Correo electrónico:</label>
+                    <input required type="email" name="email" class="form-control" placeholder="Correo electrónico" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="password1">Contraseña:</label>
+                    <input required type="password" name="password1" class="form-control" placeholder="Contraseña" id="password1">
+                </div>
+                <div class="mb-3">
+                    <label for="password2">Confirme su contraseña:</label>
+                    <input required type="password" name="password2" class="form-control" placeholder="Confirma tu contraseña" id="password2">
+                </div>
+
+                <button class="btn btn-dark">
+                    Signup
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

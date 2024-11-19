@@ -1,0 +1,30 @@
+{% extends "header-footer.html" %}
+
+{% block content %}
+    <div class="container text-center">
+        <h1 class="my-5 display-4">
+            GESTIÓN DOCENTE CERTUS
+        </h1>
+
+        {% if user.is_authenticated %}
+            <p class="mt-4 fs-3">Bienvenido(a), <span class="fw-bold text-uppercase">{{ user.first_name }}</span></p>
+            <p class="lead">
+                ¡Nos alegra verte de nuevo!
+            </p>
+            <p>
+                Desde aquí podrás gestionar tus datos, consultar tu horario, interactuar con estudiantes y acceder a herramientas diseñadas para facilitar tu trabajo diario. Estamos comprometidos en brindarte el apoyo necesario para que tu labor educativa sea más eficiente y enriquecedora. ¡Explora todas las funcionalidades y mantente al tanto de tus actividades académicas!
+            </p>
+        {% else %}
+            <p class="lead">
+                Bienvenidos a la plataforma de Gestión de Docentes de Instituto Certus
+            </p>
+            <p>
+                Nos complace darles la bienvenida a nuestra plataforma, creada para apoyar a nuestros docentes en su labor educativa. ¡Estamos aquí para apoyarles en cada paso de su camino académico!
+            </p>
+            <div class="mt-4">
+                <a class="btn btn-dark me-3" href="inicio_sesion">Iniciar Sesión</a>
+                <a class="btn btn-secondary" href="crear_cuenta">Crear Cuenta</a>
+            </div>
+        {% endif %}
+    </div>
+{% endblock content %}
